@@ -1,3 +1,19 @@
 spring:
   application:
-    name: bcm.api
+    name: bcm-api
+
+server:
+  compression:
+    enabled: true
+    mime-types: application/json
+
+# --- App Configuration ---
+bcm:
+  bitjita:
+    base-url: https://bitjita.com/api
+    cache-max-age: 60
+  cors:
+    allowed-origins:
+      - http://localhost:5173
+      - http://localhost:3000
+      - https://bitcraft-city-manager.vercel.app
